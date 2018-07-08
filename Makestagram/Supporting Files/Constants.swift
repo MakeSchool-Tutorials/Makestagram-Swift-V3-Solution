@@ -16,4 +16,10 @@ struct Constants {
     struct UserDefaults {
         static let currentUser = "currentUser"
     }
+    
+    struct TabBarItems {
+        static let home = 0
+        static let photo = 1
+        static let friends = 2
+    }
 }
