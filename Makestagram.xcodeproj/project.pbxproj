@@ -26,6 +26,9 @@
 		BC866E7320F2A9D600C0624A /* MGPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E7220F2A9D600C0624A /* MGPhotoHelper.swift */; };
 		BC866E7520F2AF3A00C0624A /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E7420F2AF3A00C0624A /* StorageService.swift */; };
 		BC866E7720F2AF7300C0624A /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E7620F2AF7300C0624A /* PostService.swift */; };
+		BC866E7920F2BB0300C0624A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E7820F2BB0300C0624A /* Post.swift */; };
+		BC866E7B20F2BCEF00C0624A /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E7A20F2BCEF00C0624A /* UIImage+Size.swift */; };
+		BC866E7D20F2BEB600C0624A /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E7C20F2BEB600C0624A /* StorageReference+Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,9 @@
 		BC866E7220F2A9D600C0624A /* MGPhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGPhotoHelper.swift; sourceTree = "<group>"; };
 		BC866E7420F2AF3A00C0624A /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		BC866E7620F2AF7300C0624A /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		BC866E7820F2BB0300C0624A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		BC866E7A20F2BCEF00C0624A /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
+		BC866E7C20F2BEB600C0624A /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+Post.swift"; sourceTree = "<group>"; };
 		FE4FF467E043EFB6E363B0F7 /* Pods-Makestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				BC866E6A20F28A9C00C0624A /* Storyboard+Utility.swift */,
+				BC866E7A20F2BCEF00C0624A /* UIImage+Size.swift */,
+				BC866E7C20F2BEB600C0624A /* StorageReference+Post.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				BC866E6220F27DFC00C0624A /* User.swift */,
+				BC866E7820F2BB0300C0624A /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -335,10 +344,13 @@
 				BC866E6720F2836B00C0624A /* UserService.swift in Sources */,
 				BC866E7120F2A86900C0624A /* MainTabBarController.swift in Sources */,
 				BC866E6120F2683500C0624A /* LoginViewController.swift in Sources */,
+				BC866E7920F2BB0300C0624A /* Post.swift in Sources */,
+				BC866E7B20F2BCEF00C0624A /* UIImage+Size.swift in Sources */,
 				BC866E6D20F295F800C0624A /* HomeViewController.swift in Sources */,
 				BC866E7320F2A9D600C0624A /* MGPhotoHelper.swift in Sources */,
 				BC866E6520F2807B00C0624A /* CreateUsernameViewController.swift in Sources */,
 				BC866E6F20F2960500C0624A /* FindFriendsViewController.swift in Sources */,
+				BC866E7D20F2BEB600C0624A /* StorageReference+Post.swift in Sources */,
 				BC6104F320F25D3C007479B8 /* AppDelegate.swift in Sources */,
 				BC866E7720F2AF7300C0624A /* PostService.swift in Sources */,
 				BC866E6B20F28A9C00C0624A /* Storyboard+Utility.swift in Sources */,
