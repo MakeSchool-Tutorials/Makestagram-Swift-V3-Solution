@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseAuthUI
+import FirebaseDatabase
 
 typealias FIRUser = FirebaseAuth.User
 
@@ -26,27 +27,13 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBAction func loginButtonTapped(_ sender: Any) {
-        // 1
         guard let authUI = FUIAuth.defaultAuthUI()
             else { return }
         
-        // 2
         authUI.delegate = self
         
-        // 3
         let authViewController = authUI.authViewController()
         present(authViewController, animated: true)
     }
@@ -59,6 +46,21 @@ extension LoginViewController: FUIAuthDelegate {
             return
         }
         
-        print("handle user signup / login")
+        guard let user = user
+            else { return }
+        
+        UserService.show(forUID: user.uid) { (user) in
+            if let user = user {
+                // handle existing user
+                User.setCurrent(user)
+                
+                let initialViewController = UIStoryboard.initialViewController(for: .main)
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+            } else {
+                // handle new user
+                self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
+            }
+        }
     }
 }
