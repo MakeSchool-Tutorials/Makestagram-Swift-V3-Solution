@@ -20,6 +20,8 @@
 		BC866E6720F2836B00C0624A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E6620F2836B00C0624A /* UserService.swift */; };
 		BC866E6920F288FD00C0624A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E6820F288FD00C0624A /* Constants.swift */; };
 		BC866E6B20F28A9C00C0624A /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E6A20F28A9C00C0624A /* Storyboard+Utility.swift */; };
+		BC866E6D20F295F800C0624A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E6C20F295F800C0624A /* HomeViewController.swift */; };
+		BC866E6F20F2960500C0624A /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E6E20F2960500C0624A /* FindFriendsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		BC866E6620F2836B00C0624A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		BC866E6820F288FD00C0624A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BC866E6A20F28A9C00C0624A /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
+		BC866E6C20F295F800C0624A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BC866E6E20F2960500C0624A /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
 		FE4FF467E043EFB6E363B0F7 /* Pods-Makestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				BC866E6020F2683500C0624A /* LoginViewController.swift */,
+				BC866E6C20F295F800C0624A /* HomeViewController.swift */,
+				BC866E6E20F2960500C0624A /* FindFriendsViewController.swift */,
 				BC866E6420F2807B00C0624A /* CreateUsernameViewController.swift */,
 			);
 			path = Controllers;
@@ -315,7 +321,9 @@
 				BC866E6320F27DFC00C0624A /* User.swift in Sources */,
 				BC866E6720F2836B00C0624A /* UserService.swift in Sources */,
 				BC866E6120F2683500C0624A /* LoginViewController.swift in Sources */,
+				BC866E6D20F295F800C0624A /* HomeViewController.swift in Sources */,
 				BC866E6520F2807B00C0624A /* CreateUsernameViewController.swift in Sources */,
+				BC866E6F20F2960500C0624A /* FindFriendsViewController.swift in Sources */,
 				BC6104F320F25D3C007479B8 /* AppDelegate.swift in Sources */,
 				BC866E6B20F28A9C00C0624A /* Storyboard+Utility.swift in Sources */,
 				BC866E6920F288FD00C0624A /* Constants.swift in Sources */,
