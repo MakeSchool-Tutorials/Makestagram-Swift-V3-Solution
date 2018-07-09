@@ -38,4 +38,34 @@ struct UserService {
             })
         }
     }
+    
+    static func posts(for user: User, completion: @escaping ([Post]) -> Void) {
+        let ref = Database.database().reference().child("posts").child(user.uid)
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
+                return completion([])
+            }
+            
+            let dispatchGroup = DispatchGroup()
+            
+            let posts: [Post] = snapshot.reversed().compactMap {
+                guard let post = Post(snapshot: $0)
+                    else { return nil }
+                
+                dispatchGroup.enter()
+                
+                LikeService.isPostLiked(post) { (isLiked) in
+                    post.isLiked = isLiked
+                    
+                    dispatchGroup.leave()
+                }
+                
+                return post
+            }
+            
+            dispatchGroup.notify(queue: .main, execute: {
+                completion(posts)
+            })
+        })
+    }
 }

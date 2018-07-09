@@ -29,6 +29,11 @@
 		BC866E7920F2BB0300C0624A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E7820F2BB0300C0624A /* Post.swift */; };
 		BC866E7B20F2BCEF00C0624A /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E7A20F2BCEF00C0624A /* UIImage+Size.swift */; };
 		BC866E7D20F2BEB600C0624A /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E7C20F2BEB600C0624A /* StorageReference+Post.swift */; };
+		BC866E7F20F2CD3E00C0624A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC866E7E20F2C85000C0624A /* Home.storyboard */; };
+		BC866E8120F2D07E00C0624A /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E8020F2D07E00C0624A /* PostImageCell.swift */; };
+		BC866E8320F2D5EB00C0624A /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E8220F2D5EB00C0624A /* PostHeaderCell.swift */; };
+		BC866E8520F2D78400C0624A /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E8420F2D78400C0624A /* PostActionCell.swift */; };
+		BC866E8720F2E11200C0624A /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC866E8620F2E11200C0624A /* LikeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +62,11 @@
 		BC866E7820F2BB0300C0624A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BC866E7A20F2BCEF00C0624A /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
 		BC866E7C20F2BEB600C0624A /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+Post.swift"; sourceTree = "<group>"; };
+		BC866E7E20F2C85000C0624A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Home.storyboard; path = /Users/dion/Desktop/Makestagram/Makestagram/Storyboards/Home.storyboard; sourceTree = "<absolute>"; };
+		BC866E8020F2D07E00C0624A /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
+		BC866E8220F2D5EB00C0624A /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
+		BC866E8420F2D78400C0624A /* PostActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostActionCell.swift; sourceTree = "<group>"; };
+		BC866E8620F2E11200C0624A /* LikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
 		FE4FF467E043EFB6E363B0F7 /* Pods-Makestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				BC866E6620F2836B00C0624A /* UserService.swift */,
+				BC866E8620F2E11200C0624A /* LikeService.swift */,
 				BC866E7420F2AF3A00C0624A /* StorageService.swift */,
 				BC866E7620F2AF7300C0624A /* PostService.swift */,
 			);
@@ -176,6 +187,7 @@
 		BC61050B20F26220007479B8 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				BC866E7E20F2C85000C0624A /* Home.storyboard */,
 				BC6104F620F25D3C007479B8 /* Main.storyboard */,
 				BC866E5C20F2657100C0624A /* Login.storyboard */,
 				BC6104FB20F25D3D007479B8 /* LaunchScreen.storyboard */,
@@ -196,6 +208,9 @@
 		BC61050D20F26230007479B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BC866E8020F2D07E00C0624A /* PostImageCell.swift */,
+				BC866E8420F2D78400C0624A /* PostActionCell.swift */,
+				BC866E8220F2D5EB00C0624A /* PostHeaderCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -264,6 +279,7 @@
 				BC6104FD20F25D3D007479B8 /* LaunchScreen.storyboard in Resources */,
 				BC61050520F25FDF007479B8 /* GoogleService-Info.plist in Resources */,
 				BC6104FA20F25D3D007479B8 /* Assets.xcassets in Resources */,
+				BC866E7F20F2CD3E00C0624A /* Home.storyboard in Resources */,
 				BC866E5D20F2657100C0624A /* Login.storyboard in Resources */,
 				BC6104F820F25D3C007479B8 /* Main.storyboard in Resources */,
 			);
@@ -317,6 +333,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -324,6 +341,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -344,7 +362,10 @@
 				BC866E6720F2836B00C0624A /* UserService.swift in Sources */,
 				BC866E7120F2A86900C0624A /* MainTabBarController.swift in Sources */,
 				BC866E6120F2683500C0624A /* LoginViewController.swift in Sources */,
+				BC866E8520F2D78400C0624A /* PostActionCell.swift in Sources */,
+				BC866E8720F2E11200C0624A /* LikeService.swift in Sources */,
 				BC866E7920F2BB0300C0624A /* Post.swift in Sources */,
+				BC866E8120F2D07E00C0624A /* PostImageCell.swift in Sources */,
 				BC866E7B20F2BCEF00C0624A /* UIImage+Size.swift in Sources */,
 				BC866E6D20F295F800C0624A /* HomeViewController.swift in Sources */,
 				BC866E7320F2A9D600C0624A /* MGPhotoHelper.swift in Sources */,
@@ -354,6 +375,7 @@
 				BC6104F320F25D3C007479B8 /* AppDelegate.swift in Sources */,
 				BC866E7720F2AF7300C0624A /* PostService.swift in Sources */,
 				BC866E6B20F28A9C00C0624A /* Storyboard+Utility.swift in Sources */,
+				BC866E8320F2D5EB00C0624A /* PostHeaderCell.swift in Sources */,
 				BC866E6920F288FD00C0624A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

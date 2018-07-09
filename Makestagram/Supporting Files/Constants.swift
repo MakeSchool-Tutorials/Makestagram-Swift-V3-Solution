@@ -22,4 +22,10 @@ struct Constants {
         static let photo = 1
         static let friends = 2
     }
+    
+    struct HomeTableViewCells {
+        static let header = "PostHeaderCell"
+        static let image = "PostImageCell"
+        static let action = "PostActionCell"
+    }
 }
