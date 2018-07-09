@@ -69,8 +69,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pLM-za-yFz">
-                                                    <rect key="frame" x="-3" y="0.0" width="375" height="374.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pLM-za-yFz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>

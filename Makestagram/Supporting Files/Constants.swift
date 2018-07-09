@@ -28,4 +28,8 @@ struct Constants {
         static let image = "PostImageCell"
         static let action = "PostActionCell"
     }
+    
+    struct FindFriendsCells {
+        static let main = "FindFriendsCell"
+    }
 }
