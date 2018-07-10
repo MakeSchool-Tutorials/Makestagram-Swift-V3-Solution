@@ -14,12 +14,29 @@ struct FollowService {
         let currentUID = User.current.uid
         let followData = ["followers/\(user.uid)/\(currentUID)" : true,
                           "following/\(currentUID)/\(user.uid)" : true]
+        
         let ref = Database.database().reference()
         ref.updateChildValues(followData) { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
+                success(false)
             }
-            success(error == nil)
+            
+            UserService.posts(for: user) { (posts) in
+                let postKeys = posts.compactMap { $0.key }
+                
+                var followData = [String : Any]()
+                let timelinePostDict = ["poster_uid" : user.uid]
+                postKeys.forEach { followData["timeline/\(currentUID)/\($0)"] = timelinePostDict }
+                
+                ref.updateChildValues(followData, withCompletionBlock: { (error, ref) in
+                    if let error = error {
+                        assertionFailure(error.localizedDescription)
+                    }
+                    
+                    success(error == nil)
+                })
+            }
         }
     }
     
@@ -34,8 +51,25 @@ struct FollowService {
         ref.updateChildValues(followData) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
+                return success(false)
             }
-            success(error == nil)
+            
+            UserService.posts(for: user, completion: { (posts) in
+                var unfollowData = [String : Any]()
+                let postsKeys = posts.compactMap { $0.key }
+                postsKeys.forEach {
+                    // Use NSNull() object instead of nil because updateChildValues expects type [Hashable : Any]
+                    unfollowData["timeline/\(currentUID)/\($0)"] = NSNull()
+                }
+                
+                ref.updateChildValues(unfollowData, withCompletionBlock: { (error, ref) in
+                    if let error = error {
+                        assertionFailure(error.localizedDescription)
+                    }
+                    
+                    success(error == nil)
+                })
+            })
         }
     }
     
